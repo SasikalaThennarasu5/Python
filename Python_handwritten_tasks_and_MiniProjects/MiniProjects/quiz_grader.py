@@ -1,70 +1,73 @@
-# 20. Quiz Grader App
-# Scenario: Auto-grade a multiple-choice quiz with displayed questions
+    # 20. Quiz Grader App
+    # Scenario: Auto-grade a multiple-choice quiz with displayed questions
 
-# List of questions, options, and correct answers
+    # List of questions, options, and correct answers
+    # 20. Quiz Grader App (with new questions)
+
 questions = [
     {
-        "question": "1. What is the capital of India?",
-        "options": ["A. Mumbai", "B. Kolkata", "C. New Delhi", "D. Chennai"],
+        "question": "1. Who wrote the national anthem of India?",
+        "options": ["A. Bankim Chandra", "B. Rabindranath Tagore", "C. Subhash Chandra Bose", "D. Sarojini Naidu"],
+        "answer": "B"
+    },
+    {
+        "question": "2. What is the smallest prime number?",
+        "options": ["A. 0", "B. 1", "C. 2", "D. 3"],
         "answer": "C"
     },
     {
-        "question": "2. Which planet is known as the Red Planet?",
-        "options": ["A. Earth", "B. Venus", "C. Jupiter", "D. Mars"],
-        "answer": "D"
-    },
-     {
-        "question": "3. Which shape has 3 sides?",
-        "options": ["A. Circle", "B. Square", "C. Triangle", "D. Rectangle"],
+        "question": "3. Which organ purifies our blood?",
+        "options": ["A. Heart", "B. Lungs", "C. Kidney", "D. Liver"],
         "answer": "C"
     },
     {
-        "question": "4. What is the boiling point of water?",
-        "options": ["A. 50°C", "B. 90°C", "C. 100°C", "D. 110°C"],
+        "question": "4. Which gas do plants absorb from the atmosphere?",
+        "options": ["A. Oxygen", "B. Nitrogen", "C. Carbon Dioxide", "D. Hydrogen"],
         "answer": "C"
     },
     {
-        "question": "5. What is the chemical symbol for Gold?",
-        "options": ["A. Gd", "B. Go", "C. G", "D. Au"],
-        "answer": "D"
+        "question": "5. Who invented the light bulb?",
+        "options": ["A. Newton", "B. Einstein", "C. Thomas Edison", "D. Galileo"],
+        "answer": "C"
     }
 ]
 
 user_answers = []
 score = 0
 
+# Ask questions
 for q in questions:
     print("\n" + q["question"])
     for option in q["options"]:
         print(option)
-    
+
     ans = input("Your answer (A/B/C/D): ").strip().upper()
     if ans not in ['A', 'B', 'C', 'D']:
-        print(" Invalid choice! Exiting quiz.")
+        print("❌ Invalid choice! Exiting quiz.")
         exit()
-    
     user_answers.append(ans)
 
-# Use loop to compare and count correct responses.
+# Check answers
 for i in range(len(questions)):
     if user_answers[i] == questions[i]["answer"]:
         score += 1
 
-# Use if to assign grade based on score.
+# Grade assignment
 if score == 5:
     grade = "A+"
-elif score >= 4:
+elif score == 4:
     grade = "A"
-elif score >= 3:
+elif score == 3:
     grade = "B"
-elif score >= 2:
+elif score == 2:
     grade = "C"
 else:
     grade = "F"
 
+# Show results
 print("\n------ Quiz Results ------")
 for i in range(len(questions)):
     print(f"Q{i+1}: Your Answer: {user_answers[i]} | Correct: {questions[i]['answer']}")
-print(f"\nScore : {score} / 5")
-print(f"Grade : {grade}")
+print(f"\n✅ Score : {score} / 5")
+print(f"🎓 Grade : {grade}")
 print("--------------------------")

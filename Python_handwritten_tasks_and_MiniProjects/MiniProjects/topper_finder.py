@@ -3,11 +3,11 @@
 
 # Dictionary: name → marks
 students = {
-    "sugan": 87,
-    "Dharun": 92,
-    "Vishwa": 95,
-    "Santoz": 88,
-    "Manoj": 90
+    "sasi": 95,
+    "vasu": 92,
+    "aishu": 96,
+    "vidya": 73,
+    "bala": 92
 }
 
 # Use for loop to find max marks and topper name
