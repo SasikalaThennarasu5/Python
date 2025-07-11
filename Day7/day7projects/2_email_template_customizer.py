@@ -1,0 +1,5 @@
+name = input("Enter your name: ")
+course = input("Enter your course: ")
+duration = input("Enter duration in days: ")
+message = "Dear {}, your {} course starts in {} days.".format(name, course, duration)
+print(message)

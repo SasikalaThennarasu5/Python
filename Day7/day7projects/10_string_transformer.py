@@ -1,0 +1,5 @@
+text = input("Enter a sentence: ")
+print("Uppercase:", text.upper())
+print("Lowercase:", text.lower())
+print("Title Case:", text.title())
+print("Underscored:", text.replace(" ", "_"))

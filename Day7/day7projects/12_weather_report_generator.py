@@ -1,0 +1,6 @@
+city = input("Enter city: ")
+temp = int(input("Enter temperature (°C): "))
+humidity = int(input("Enter humidity (%): "))
+print(f"Weather in {city}: {temp}°C, {humidity}% humidity")
+print("Weather in {}: {}°C, {}% humidity".format(city, temp, humidity))
+print("Weather in %s: %d°C, %d%% humidity" % (city, temp, humidity))

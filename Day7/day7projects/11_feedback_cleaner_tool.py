@@ -1,0 +1,6 @@
+feedback = input("Enter feedback: ").strip().replace("!", "")
+word_count = len(feedback.split())
+char_count = len(feedback)
+print("Cleaned Feedback:", feedback)
+print("Word count:", word_count)
+print("Character count:", char_count)

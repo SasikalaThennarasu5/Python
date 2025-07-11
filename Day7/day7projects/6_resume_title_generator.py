@@ -1,0 +1,5 @@
+first = input("Enter first name: ")
+last = input("Enter last name: ")
+role = input("Enter job role: ")
+resume_title = " | ".join([first, last, role]).upper()
+print(resume_title)
