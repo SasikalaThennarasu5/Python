@@ -1,0 +1,90 @@
+.tick-container {
+  position: absolute;
+  top: 72.2%;
+  left: 48.3%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+}
+
+.tick-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Circle Animation*/
+.tick-circle {
+  fill: none;
+  stroke: #28a745;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  transform: rotate(-90deg); 
+  transform-origin: center;
+  animation: drawCircle 2s ease-in-out infinite;
+}
+
+/* Tick Animation */
+.tick-check {
+  width: 60px !important;
+  height: 60px !important;
+}
+.tick-check {
+  fill: none;
+  stroke: #28a745;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 60;
+  stroke-dashoffset: 60;
+  animation: drawTick 2s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* Clockwise Circle Animation */
+@keyframes drawCircle {
+  0% {
+    stroke-dashoffset: 283;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 283;
+  }
+}
+
+/* Tick Draw Animation */
+@keyframes drawTick {
+  0% {
+    stroke-dashoffset: 60;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 60;
+  }
+}
+
+
+/* Tablet (landscape & portrait): width between 768px and 1024px */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .tick-container {
+    top: 79%;
+    left: 47%;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Mobile (portrait & small devices): width below 768px */
+@media (max-width: 767px) {
+  .tick-container {
+    top: 77.5%;
+    left: 46%;
+    width: 30px;
+    height: 30px;
+  }
+}
